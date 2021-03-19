@@ -1,0 +1,32 @@
+@import "variables";
+
+@mixin BUTTON {
+  border: 2px solid $ALERT_COLOR;
+  background-color: $ALERT_COLOR;
+  padding: 0 1rem;
+  min-width: 10rem;
+
+  color: white;
+  line-height: 3;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $SECONDARY_COLOR_ALT;
+    color: $ALERT_COLOR;
+  }
+
+  &:disabled {
+    border-color: lightgrey;
+    background-color: lightgrey;
+    pointer-events: none;
+  }
+}
+
+@mixin BORDER {
+  border: 2px solid $PRIMARY_COLOR_ALT;
+  border-radius: 3px;
+
+  &:hover, &:focus {
+    border-color: $PRIMARY_COLOR;
+  }
+}

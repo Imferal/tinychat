@@ -1,0 +1,156 @@
+@import "./../../scss/mixins";
+@import "./../../scss/variables";
+
+.chat {
+  &__title {
+    font-size: 1.5rem;
+    text-align: right;
+    position: relative;
+    padding-bottom: 0.6rem;
+
+    &:after {
+      content: '';
+      background-color: $PRIMARY_COLOR;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      width: 50%;
+    }
+  }
+
+  &__body {
+    margin-top: 1rem;
+    display: grid;
+    grid-gap: 0.25rem;
+    grid-template-columns: 100px auto;
+    grid-template-rows: calc(100% - 12rem) auto;
+  }
+
+  &__status {
+    @include BORDER;
+    background-color: #fff;
+    padding: 1rem 0.5rem;
+  }
+
+  &__online {
+    color: white;
+    background-color: $SECONDARY_COLOR;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  &__user {
+    margin-top: 1rem;
+    padding: 0.2rem;
+  }
+
+  &__dialogs {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__messages {
+    @include BORDER;
+    background-color: #fff;
+    padding: 1rem;
+    overflow-y: scroll;
+    height: calc(100vh - 17rem);
+  }
+
+  &__message {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    display: inline-block;
+    color: #fff;
+    background-color: $PRIMARY_COLOR;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+
+    &_right {
+      align-self: flex-start;
+    }
+
+    &_left {
+      background-color: $SECONDARY_COLOR;
+      align-self: flex-end;
+    }
+  }
+
+  &__author {
+    text-align: right;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+
+    &_right {
+      align-self: flex-start;
+    }
+
+    &_left {
+      color: $SECONDARY_COLOR;
+      align-self: flex-end;
+    }
+  }
+
+  &__newMessage {
+    margin-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    textarea {
+      @include BORDER;
+      padding: 0.4rem;
+      height: 5rem;
+      width: 100%;
+      resize: none;
+    }
+
+    button {
+      margin-top: 0.25rem;
+    }
+  }
+
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: fixed;
+    padding: 0 1rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    height: 1.8rem;
+    color: $PRIMARY_COLOR;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (min-width: 361px) {
+  .chat__body {
+    grid-template-columns: 120px auto;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .chat__body {
+    grid-template-columns: 140px auto;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .chat__body {
+    grid-template-columns: 160px auto;
+  }
+}

@@ -1,0 +1,42 @@
+@import "./../../scss/_mixins";
+@import "./../../scss/_variables";
+
+.join {
+  display: flex;
+  flex-direction: column;
+
+  align-content: center;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &__version {
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  &__description {
+    padding: 1.5rem 0;
+  }
+
+  &__input {
+@include BORDER;
+    font-size: 0.9rem;
+    text-align: center;
+    color: $PRIMARY_COLOR;
+    padding: 0.3rem;
+    outline: none;
+
+    &_indent {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__button_indent {
+    align-self: center;
+    margin-top: 1.5rem;
+  }
+
+}
