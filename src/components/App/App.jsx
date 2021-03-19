@@ -3,7 +3,7 @@ import s from './App.scss';
 import {Join} from "../Join/Join";
 import reducer from "../../reducer";
 import socket from "../../socket";
-import Chat from "../Chat/Chat";
+import Chat from "../Room/Room";
 
 function App() {
   const [state, dispatch] = React.useReducer(reducer, {
@@ -41,7 +41,7 @@ function App() {
   const setData = ({users, messages}) => {
     dispatch({
       type: 'SET_DATA',
-      payload: {users,messages}
+      payload: {users, messages}
     })
   }
 
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div className={s.container}>
-      {state.joined ? <Chat {...state} onAddMessage={addMessage} /> : <Join onLogin={onLogin}/>}
+      {state.joined ? <Chat {...state} onAddMessage={addMessage}/> : <Join onLogin={onLogin}/>}
     </div>
   );
 }

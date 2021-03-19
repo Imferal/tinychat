@@ -4,9 +4,7 @@
 .join {
   display: flex;
   flex-direction: column;
-
   align-content: center;
-
   position: absolute;
   left: 50%;
   top: 50%;
@@ -22,7 +20,7 @@
   }
 
   &__input {
-@include BORDER;
+    @include BORDER;
     font-size: 0.9rem;
     text-align: center;
     color: $PRIMARY_COLOR;
@@ -38,5 +36,4 @@
     align-self: center;
     margin-top: 1.5rem;
   }
-
 }

@@ -1,8 +1,8 @@
 import React from 'react'
-import s from './Chat.module.scss'
+import s from './Room.module.scss'
 import socket from "../../socket";
 
-function Chat({ users, messages, userName, roomId, onAddMessage }) {
+function Room({users, messages, userName, roomId, onAddMessage}) {
   // Добавляем в стейт значение textarea
   const [messageValue, setMessageValue] = React.useState('')
   // Находим "сигнальный" блок для автоскролла
@@ -24,7 +24,7 @@ function Chat({ users, messages, userName, roomId, onAddMessage }) {
       text: messageValue,
     })
     // Диспатчим сообщение в стейт
-    onAddMessage({ userName, text: messageValue })
+    onAddMessage({userName, text: messageValue})
     setMessageValue('')
   }
 
@@ -61,9 +61,10 @@ function Chat({ users, messages, userName, roomId, onAddMessage }) {
           </form>
         </div>
       </div>
-      <small className={s.chat__footer}><span>Copyleft, 2021 Копируйте на здоровье</span><a href='https://github.com/Imferal'>исходники тут</a></small>
+      <small className={s.chat__footer}><span>Copyleft, 2021 Копируйте на здоровье</span><a
+        href='https://github.com/Imferal'>исходники тут</a></small>
     </div>
   )
 }
 
-export default Chat
+export default Room

@@ -5,13 +5,21 @@
 ## Стэк
 
 ### На бэке:
+
 NodeJS, ExpressJS, Socket.io, база в MAP
 
 ### На фронте:
+
 ReactJS, Socket.io-client, хуки
 
-### Поболтать в ПростоЧате можно по адресу:
+### Сервер
 
+Развернул на Heroku\
+[tinychatserver.herokuapp.com/](tinychatserver.herokuapp.com/)
+
+### Клиент
+
+Поболтать в ПростоЧате можно на моём сайте по адресу:\
 [http://www.frontenddeveloper.ru/chat](http://www.frontenddeveloper.ru/chat)
 
 `ВАЖНО! Общайтесь исключительно на свой страх и риск, так как никакой конфеденциальности "ПростоЧат" не предоставляет!`
