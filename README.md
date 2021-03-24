@@ -8,6 +8,9 @@
 
 NodeJS, ExpressJS, Socket.io, база в MAP
 
+Серверная часть лежит тут:\
+https://github.com/Imferal/tinychat_server
+
 ### На фронте:
 
 ReactJS, Socket.io-client, хуки
